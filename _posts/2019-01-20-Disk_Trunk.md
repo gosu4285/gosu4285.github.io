@@ -20,10 +20,9 @@ lsof \| grep deleted
 
 파일디스크립터를 다루는 lsof 명령어에서 deleted라는 단어로 grep을 하게 되면 파일은 지웠지만 close하지 않은 파일들의 리스트가 나타납니다.
 
-![Image Alt 텍스트](https://gosu4285.github.io/assets/img/file_open_test_01.png)
+![file_open_test_01](https://user-images.githubusercontent.com/34617490/51439639-892acd80-1d00-11e9-8999-85ee9dfee7f7.PNG)
+![file_open_test_02](https://user-images.githubusercontent.com/34617490/51439650-a2337e80-1d00-11e9-8834-cdd5ff67f1e7.PNG)
 
-![Image Alt 텍스트](/assets/img/file_open_test_01.png)
-![Image Alt 텍스트](/assets/img/file_open_test_02.png)
 
 
 
