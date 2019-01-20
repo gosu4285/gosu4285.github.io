@@ -15,12 +15,18 @@ categories: Linux
 먼저 파일은 지웠는데 정상적으로 close해주지 못한 것을 찾는 방법에 대해서 설명드리겠습니다.
 
 
+테스트 코드로 282MB 크기의 파일을 9개 복사해서 close하지 않고 지웠을 경우 용량이 확보되지 않는 것을 예제로 만들어봤습니다.
+
+![file_open_test_01](https://user-images.githubusercontent.com/34617490/51439639-892acd80-1d00-11e9-8999-85ee9dfee7f7.PNG)
+
+이와 같이 파일을 삭제했음에도 디스크용량에는 변함이 없는것을 확인할 수 있습니다. 
+다음은 파일은 지웠지만 cloes되지 않은 파일들을 확인하는 방법입니다.
+
 lsof \| grep deleted
 /usr/sbin/lsof \| grep deleted 
 
 파일디스크립터를 다루는 lsof 명령어에서 deleted라는 단어로 grep을 하게 되면 파일은 지웠지만 close하지 않은 파일들의 리스트가 나타납니다.
 
-![file_open_test_01](https://user-images.githubusercontent.com/34617490/51439639-892acd80-1d00-11e9-8999-85ee9dfee7f7.PNG)
 ![file_open_test_02](https://user-images.githubusercontent.com/34617490/51439650-a2337e80-1d00-11e9-8834-cdd5ff67f1e7.PNG)
 
 
