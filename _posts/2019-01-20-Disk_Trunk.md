@@ -23,6 +23,7 @@ categories: Linux
 다음은 파일은 지웠지만 cloes되지 않은 파일들을 확인하는 방법입니다.
 
 lsof \| grep deleted
+
 /usr/sbin/lsof \| grep deleted 
 
 파일디스크립터를 다루는 lsof 명령어에서 deleted라는 단어로 grep을 하게 되면 파일은 지웠지만 close하지 않은 파일들의 리스트가 나타납니다.
