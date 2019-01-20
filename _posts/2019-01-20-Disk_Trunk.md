@@ -40,9 +40,14 @@ lsof \| grep deleted
 
 하지만 데몬과 같이 종료를 할 수 없는 경우 아래와 같은 방법을 시도하면 프로세스를 종료하지 않고 용량을 확보할수 있습니다.
 
-: > truncate 
+\: > "/proc/$pid/fd/$fd"
 
+![file_open_test_03](https://user-images.githubusercontent.com/34617490/51440012-212ab600-1d05-11e9-9cc8-4ea60c5594fc.PNG)
 
+lsof 명령어를 통해 2(프로세스 id), 4(파일디스크립터) 번째 항목의 정보를 갖고 truncate 명령어를 실행해주면
+프로세스를 종료하지 않고 디스크의 용량을 확보할 수 있습니다.
+
+![file_open_test_04](https://user-images.githubusercontent.com/34617490/51440041-b7f77280-1d05-11e9-9b5e-7b0d442865d6.PNG)
 
 
 
